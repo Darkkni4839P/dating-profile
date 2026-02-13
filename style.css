@@ -48,7 +48,7 @@ button:hover {
     box-shadow: 0 0 15px rgba(245, 215, 110, 0.7);
 }
 
-/* Photo Section */
+
 .photo-section img {
     width: 250px;
     border-radius: 20px;
@@ -61,7 +61,7 @@ button:hover {
     transform: scale(1.05);
 }
 
-/* Skills */
+
 .skill {
     width: 90%;
     max-width: 500px;
@@ -97,7 +97,6 @@ button:hover {
     from { width: 0; }
 }
 
-/* Floating Hearts (Dynamic Version) */
 
 .hearts {
     position: fixed;
@@ -154,7 +153,6 @@ button:hover {
     }
 
 }
-/* Success Screen */
 
 .success-screen {
     position: fixed;
@@ -186,4 +184,5 @@ button:hover {
 }
 .hidden {
     display: none;
+
 }
