@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #000000, #1a1a1a);
+    color: #f5d76e;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+section {
+    padding: 60px 15px;
+}
+
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    z-index: 2;
+}
+.hero h1 {
+    color: #f5d76e;
+    text-shadow: 0 0 15px rgba(245, 215, 110, 0.6);
+}
+
+button {
+    padding: 12px 25px;
+    border: none;
+    background: #f5d76e;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 25px;
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #000000;
+    color: #f5d76e;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(245, 215, 110, 0.7);
+}
+
+/* Photo Section */
+.photo-section img {
+    width: 250px;
+    border-radius: 20px;
+    margin-top: 20px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.5);
+    transition: 0.4s;
+}
+
+.photo-section img:hover {
+    transform: scale(1.05);
+}
+
+/* Skills */
+.skill {
+    width: 90%;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+.bar {
+    background: rgba(255,255,255,0.1);
+    height: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.bar div {
+    height: 10px;
+    background: linear-gradient(90deg, #d4af37, #f5d76e, #ffd700);
+    width: 0;
+    animation: load 2s forwards;
+    box-shadow: 0 0 10px rgba(245, 215, 110, 0.7);
+}
+
+.html { width: 90%; }
+.css { width: 85%; }
+.js { width: 75%; }
+.painting { width: 80%; }
+.poetry { width: 88%; }
+.guitar { width: 70%; }
+.keyboard { width: 65%; }
+.sports { width: 85%; }
+.motorsports { width: 78%; }
+
+@keyframes load {
+    from { width: 0; }
+}
+
+/* Floating Hearts (Dynamic Version) */
+
+.hearts {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.hearts span {
+    position: absolute;
+    font-size: 20px;
+    animation: float 8s linear infinite;
+    user-select: none;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(100vh);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-10vh);
+        opacity: 0;
+    }
+}
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    .photo-section img {
+        width: 200px;
+    }
+
+    button {
+        padding: 10px 20px;
+    }
+
+    section {
+        padding: 60px 15px;
+    }
+
+    .skill {
+        width: 95%;
+    }
+
+}
+/* Success Screen */
+
+.success-screen {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.4s ease;
+    z-index: 999;
+}
+
+.success-screen.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.success-content {
+    background: white;
+    color: black;
+    padding: 40px;
+    border-radius: 20px;
+}
+.hidden {
+    display: none;
+}
