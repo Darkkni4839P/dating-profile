@@ -1,10 +1,10 @@
 function startExperience() {
     document.getElementById("bgMusic").play();
 
-    // SHOW MAIN CONTENT
+   
     document.getElementById("mainContent").classList.remove("hidden");
 
-    // Scroll down
+   
     window.scrollTo({
         top: window.innerHeight,
         behavior: "smooth"
@@ -46,7 +46,6 @@ style.innerHTML = `
     }
 }`;
 document.head.appendChild(style);
-/* Dynamic Floating Hearts */
 
 setInterval(() => {
     let heart = document.createElement("span");
@@ -57,4 +56,5 @@ setInterval(() => {
     document.querySelector(".hearts").appendChild(heart);
 
     setTimeout(() => heart.remove(), 8000);
+
 }, 500);
